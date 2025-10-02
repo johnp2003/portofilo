@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Space theme - deep cosmic colors */
+    --background: 240 15% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 240 12% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 240 12% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Neon cyan accent */
+    --primary: 190 100% 50%;
+    --primary-foreground: 240 15% 6%;
+
+    --secondary: 240 10% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 240 8% 20%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 190 100% 50%;
+    --accent-foreground: 240 15% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 240 10% 18%;
+    --input: 240 10% 18%;
+    --ring: 190 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Space gradients */
+    --gradient-space: linear-gradient(135deg, hsl(240 15% 6%) 0%, hsl(250 20% 10%) 50%, hsl(260 15% 8%) 100%);
+    --gradient-neon: linear-gradient(135deg, hsl(190 100% 50%) 0%, hsl(200 100% 60%) 100%);
+    --glow-neon: 0 0 20px hsl(190 100% 50% / 0.5), 0 0 40px hsl(190 100% 50% / 0.3);
+    --glow-subtle: 0 0 30px hsl(190 100% 50% / 0.15);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(135deg, hsl(240 15% 6%) 0%, hsl(250 20% 10%) 50%, hsl(260 15% 8%) 100%);
+    background-attachment: fixed;
+  }
+
+  /* Starfield effect */
+  .starfield {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    .star {
+      animation: none;
+      opacity: 0.5;
+    }
+  }
+
+  /* Glow utilities */
+  .glow-text {
+    text-shadow: 0 0 20px hsl(190 100% 50% / 0.5);
+  }
+
+  .glow-border {
+    box-shadow: 0 0 20px hsl(190 100% 50% / 0.3);
+  }
+
+  /* Focus rings */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
+}
