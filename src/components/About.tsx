@@ -4,8 +4,16 @@ import { Badge } from '@/components/ui/badge';
 
 const About = () => {
   const technologies = [
-    'React', 'TypeScript', 'Node.js', 'Python',
-    'Next.js', 'Tailwind CSS', 'PostgreSQL', 'AWS'
+    'React.js',
+    'TypeScript',
+    'Node.js',
+    'Python',
+    'Next.js',
+    'Vue.js',
+    'PostgreSQL',
+    'AWS',
+    'Laravel',
+    'Symfony',
   ];
 
   return (
@@ -25,24 +33,31 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I'm a passionate Software Engineering student specializing in building exceptional digital experiences. 
-                With a strong foundation in full-stack development and a keen eye for design, I transform ideas into 
-                elegant, scalable solutions.
+                Recent BSc (Hons) Software Engineering graduate with hands-on
+                experience in full-stack development, blockchain development,
+                and AI integration through internships and projects. Skilled in
+                web technologies, database management, and agile methodologies
+                to build scalable applications. Passionate about leveraging
+                programming expertise to innovate and enhance software systems
+                in collaborative environments.
               </p>
-              
+
               <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects, 
-                or diving into the latest trends in AI and machine learning.
+                When I'm not coding, you'll find me exploring new technologies,
+                contributing to open-source projects, or diving into the latest
+                trends in AI and machine learning.
               </p>
 
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin size={20} className="text-primary" />
-                <span>San Francisco, CA</span>
+                <span>Kuala Lumpur, Malaysia</span>
               </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold mb-4 text-primary">Technologies I Work With</h3>
+              <h3 className="text-xl font-semibold mb-4 text-primary">
+                Technologies I Work With
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {technologies.map((tech, index) => (
                   <motion.div
@@ -52,8 +67,8 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <Badge 
-                      variant="outline" 
+                    <Badge
+                      variant="outline"
                       className="border-primary/50 hover:border-primary hover:bg-primary/10 transition-colors cursor-default text-base py-2 px-4"
                     >
                       {tech}

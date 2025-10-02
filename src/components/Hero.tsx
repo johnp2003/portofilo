@@ -92,7 +92,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              Hi, I'm <span className="glow-text">Alex Chen</span>
+              Hi, I'm <span className="glow-text">John Paulose</span>
             </motion.h1>
             <div className="h-20 mb-8 flex items-center">
               <span className="text-2xl md:text-3xl text-muted-foreground font-light">

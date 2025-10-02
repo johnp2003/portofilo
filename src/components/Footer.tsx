@@ -5,8 +5,16 @@ import { Button } from '@/components/ui/button';
 const Footer = () => {
   const socialLinks = [
     { icon: <Github size={20} />, href: 'https://github.com', label: 'GitHub' },
-    { icon: <Linkedin size={20} />, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: <Mail size={20} />, href: 'mailto:alex@example.com', label: 'Email' },
+    {
+      icon: <Linkedin size={20} />,
+      href: 'https://linkedin.com',
+      label: 'LinkedIn',
+    },
+    {
+      icon: <Mail size={20} />,
+      href: 'mailto:johnpaulose1990@gmail.com',
+      label: 'Email',
+    },
   ];
 
   return (
@@ -43,10 +51,11 @@ const Footer = () => {
 
           <div className="text-center space-y-2">
             <p className="text-sm text-muted-foreground flex items-center gap-2 justify-center">
-              Built with <Heart size={16} className="text-red-500" /> using Next.js, Tailwind CSS, Framer Motion & Spline
+              Built with <Heart size={16} className="text-red-500" /> using
+              Next.js, Tailwind CSS, Framer Motion & Spline
             </p>
             <p className="text-xs text-muted-foreground">
-              © 2024 Alex Chen. All rights reserved.
+              © 2024 John Paulose. All rights reserved.
             </p>
           </div>
         </div>

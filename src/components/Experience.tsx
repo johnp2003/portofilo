@@ -12,42 +12,25 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    role: 'Software Engineering Intern',
-    company: 'TechCorp Inc.',
-    period: 'Jun 2024 - Aug 2024',
+    role: 'Full Stack Developer Intern',
+    company: 'A Serious AI',
+    period: 'Aug 2024 - Dec 2024',
     highlights: [
-      'Developed microservices architecture serving 100K+ daily users',
-      'Reduced API response time by 40% through optimization',
+      'Contributed to building SuDu.AI, a revolutionary AI-powered ERP system, while actively participating in Agile sprints as a full-stack developer using Node.js and Vue.js.',
+      'Developed and optimized ERP modules such as Sales Invoice, Purchase Request, Sales Return, WM Inventory, and Stock Management.',
+      'Worked closely with cross-functional teams to enhance database schemas, UI components, tax calculations, credit limit validations, and historical data management to improve system efficiency.',
+      'Resolved over 60% of total bugs while doing sprints contributing to system stability.',
     ],
   },
   {
     id: 2,
-    role: 'Full-Stack Developer',
-    company: 'StartupXYZ',
-    period: 'Jan 2024 - May 2024',
+    role: 'Software Engineer Intern',
+    company: 'Shopper 360',
+    period: 'Jul 2023 - Jul 2024',
     highlights: [
-      'Built responsive web applications using React and Node.js',
-      'Implemented CI/CD pipeline reducing deployment time by 60%',
-    ],
-  },
-  {
-    id: 3,
-    role: 'Research Assistant',
-    company: 'University AI Lab',
-    period: 'Sep 2023 - Dec 2023',
-    highlights: [
-      'Contributed to machine learning research on NLP models',
-      'Published findings in university research symposium',
-    ],
-  },
-  {
-    id: 4,
-    role: 'Teaching Assistant',
-    company: 'Computer Science Department',
-    period: 'Jan 2023 - Aug 2023',
-    highlights: [
-      'Mentored 50+ students in Data Structures & Algorithms',
-      'Created educational content improving student engagement by 30%',
+      'Assisted in building an audit management system for Shell using Symfony, DevExtreme, and Microsoft APIs.',
+      'Led SharePoint integration, developing functions for filtering and retrieving image links, showcasing adeptness in external data handling and process optimization.',
+      'Optimized data retrieval queries, reducing load times by 20% through efficient use of Microsoft APIs and SharePoint data structures.',
     ],
   },
 ];
@@ -87,7 +70,9 @@ const Experience = () => {
                   <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
                     <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-2">
                       <div>
-                        <h3 className="text-2xl font-bold text-primary mb-1">{exp.role}</h3>
+                        <h3 className="text-2xl font-bold text-primary mb-1">
+                          {exp.role}
+                        </h3>
                         <p className="text-lg text-foreground">{exp.company}</p>
                       </div>
                       <div className="flex items-center gap-2 text-muted-foreground">
@@ -98,7 +83,10 @@ const Experience = () => {
 
                     <ul className="space-y-2">
                       {exp.highlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-muted-foreground">
+                        <li
+                          key={idx}
+                          className="flex items-start gap-2 text-muted-foreground"
+                        >
                           <span className="text-primary mt-1">▹</span>
                           <span>{highlight}</span>
                         </li>
