@@ -92,108 +92,69 @@ const Projects = () => {
             <h2 className="text-4xl md:text-5xl font-bold">Projects</h2>
           </div>
 
-          <div className="relative max-w-6xl mx-auto">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 hidden md:block -translate-x-1/2" />
-
-            <div className="space-y-16">
-              {projects.map((project, index) => {
-                const isLeft = index % 2 === 0;
-
-                return (
-                  <motion.div
-                    key={project.id}
-                    initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
-                    className={`relative grid md:grid-cols-2 gap-8 items-center ${
-                      isLeft ? '' : 'md:flex-row-reverse'
-                    }`}
-                  >
-                    {/* Timeline dot */}
-                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-primary rounded-full border-4 border-background hidden md:block z-10 shadow-lg shadow-primary/50" />
-
-                    {/* Content - Left or Right */}
-                    <div
-                      className={`${
-                        isLeft ? 'md:col-start-1' : 'md:col-start-2'
-                      }`}
+          {/* Card Grid */}
+          <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 flex flex-col"
+              >
+                <div className="aspect-video overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <div className="flex flex-col flex-1 p-6">
+                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tech.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="text-xs">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  <div className="flex gap-3 mt-auto">
+                    <Button
+                      size="sm"
+                      variant="outline"
+                      className="flex-1"
+                      onClick={() => setSelectedProject(project)}
                     >
-                      <motion.div
-                        whileHover={{ y: -8 }}
-                        className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+                      View Details
+                    </Button>
+                    <Button size="sm" variant="ghost" asChild>
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        <div className="aspect-video overflow-hidden">
-                          <img
-                            src={project.image}
-                            alt={project.title}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                          />
-                        </div>
-
-                        <div className="p-6">
-                          <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-                            {project.title}
-                          </h3>
-                          <p className="text-muted-foreground mb-4">
-                            {project.description}
-                          </p>
-
-                          <div className="flex flex-wrap gap-2 mb-4">
-                            {project.tech.map((tech) => (
-                              <Badge
-                                key={tech}
-                                variant="secondary"
-                                className="text-xs"
-                              >
-                                {tech}
-                              </Badge>
-                            ))}
-                          </div>
-
-                          <div className="flex gap-3">
-                            <Button
-                              size="sm"
-                              variant="outline"
-                              className="flex-1"
-                              onClick={() => setSelectedProject(project)}
-                            >
-                              View Details
-                            </Button>
-                            <Button size="sm" variant="ghost" asChild>
-                              <a
-                                href={project.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <Github size={16} />
-                              </a>
-                            </Button>
-                            <Button size="sm" variant="ghost" asChild>
-                              <a
-                                href={project.live}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
-                                <ExternalLink size={16} />
-                              </a>
-                            </Button>
-                          </div>
-                        </div>
-                      </motion.div>
-                    </div>
-
-                    {/* Spacer for opposite side */}
-                    <div
-                      className={`hidden md:block ${
-                        isLeft ? 'md:col-start-2' : 'md:col-start-1'
-                      }`}
-                    />
-                  </motion.div>
-                );
-              })}
-            </div>
+                        <Github size={16} />
+                      </a>
+                    </Button>
+                    <Button size="sm" variant="ghost" asChild>
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink size={16} />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>

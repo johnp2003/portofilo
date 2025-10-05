@@ -41,11 +41,21 @@ All colors MUST be HSL.
     --radius: 0.75rem;
 
     /* Space gradients */
-    --gradient-space: linear-gradient(135deg, hsl(240 15% 6%) 0%, hsl(250 20% 10%) 50%, hsl(260 15% 8%) 100%);
-    --gradient-neon: linear-gradient(135deg, hsl(190 100% 50%) 0%, hsl(200 100% 60%) 100%);
-    --glow-neon: 0 0 20px hsl(190 100% 50% / 0.5), 0 0 40px hsl(190 100% 50% / 0.3);
+    --gradient-space: linear-gradient(
+      135deg,
+      hsl(240 15% 6%) 0%,
+      hsl(250 20% 10%) 50%,
+      hsl(260 15% 8%) 100%
+    );
+    --gradient-neon: linear-gradient(
+      135deg,
+      hsl(190 100% 50%) 0%,
+      hsl(200 100% 60%) 100%
+    );
+    --glow-neon: 0 0 20px hsl(190 100% 50% / 0.5),
+      0 0 40px hsl(190 100% 50% / 0.3);
     --glow-subtle: 0 0 30px hsl(190 100% 50% / 0.15);
-    
+
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -58,8 +68,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(135deg, hsl(240 15% 6%) 0%, hsl(250 20% 10%) 50%, hsl(260 15% 8%) 100%);
-    background-attachment: fixed;
   }
 
   /* Starfield effect */
@@ -78,8 +86,13 @@ All colors MUST be HSL.
   }
 
   @keyframes twinkle {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
+    0%,
+    100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 1;
+    }
   }
 
   /* Smooth scroll */

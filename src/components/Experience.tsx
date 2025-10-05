@@ -50,51 +50,72 @@ const Experience = () => {
             <h2 className="text-4xl md:text-5xl font-bold">Experience</h2>
           </div>
 
-          <div className="relative">
+          <div className="relative max-w-6xl mx-auto">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/30 hidden md:block" />
+            <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/30 hidden md:block -translate-x-1/2" />
 
-            <div className="space-y-12">
-              {experiences.map((exp, index) => (
-                <motion.div
-                  key={exp.id}
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="relative pl-0 md:pl-20"
-                >
-                  {/* Timeline dot */}
-                  <div className="absolute left-6 top-6 w-4 h-4 bg-primary rounded-full border-4 border-background hidden md:block" />
+            <div className="space-y-16">
+              {experiences.map((exp, index) => {
+                const isLeft = index % 2 === 0;
+                return (
+                  <motion.div
+                    key={exp.id}
+                    initial={{ opacity: 0, x: isLeft ? -50 : 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.5 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className={`relative grid md:grid-cols-2 gap-8 items-center ${
+                      isLeft ? '' : 'md:flex-row-reverse'
+                    }`}
+                  >
+                    {/* Timeline dot */}
+                    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-6 h-6 bg-primary rounded-full border-4 border-background hidden md:block z-10 shadow-lg shadow-primary/50" />
 
-                  <div className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10">
-                    <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-2">
-                      <div>
-                        <h3 className="text-2xl font-bold text-primary mb-1">
-                          {exp.role}
-                        </h3>
-                        <p className="text-lg text-foreground">{exp.company}</p>
-                      </div>
-                      <div className="flex items-center gap-2 text-muted-foreground">
-                        <Calendar size={16} />
-                        <span className="text-sm">{exp.period}</span>
-                      </div>
+                    {/* Content - Left or Right */}
+                    <div
+                      className={`${
+                        isLeft ? 'md:col-start-1' : 'md:col-start-2'
+                      }`}
+                    >
+                      <motion.div
+                        whileHover={{ y: -8, scale: 1.03 }}
+                        transition={{ type: 'spring', stiffness: 300 }}
+                        className="group relative bg-card border border-border rounded-lg overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10"
+                      >
+                        <div className="p-6">
+                          <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors text-primary">
+                            {exp.role}
+                          </h3>
+                          <p className="text-lg text-foreground mb-2">
+                            {exp.company}
+                          </p>
+                          <div className="flex items-center gap-2 text-muted-foreground mb-4">
+                            <Calendar size={16} />
+                            <span className="text-sm">{exp.period}</span>
+                          </div>
+                          <ul className="space-y-2">
+                            {exp.highlights.map((highlight, idx) => (
+                              <li
+                                key={idx}
+                                className="flex items-start gap-2 text-muted-foreground"
+                              >
+                                <span className="text-primary mt-1">▹</span>
+                                <span>{highlight}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </motion.div>
                     </div>
-
-                    <ul className="space-y-2">
-                      {exp.highlights.map((highlight, idx) => (
-                        <li
-                          key={idx}
-                          className="flex items-start gap-2 text-muted-foreground"
-                        >
-                          <span className="text-primary mt-1">▹</span>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </motion.div>
-              ))}
+                    {/* Spacer for opposite side */}
+                    <div
+                      className={`hidden md:block ${
+                        isLeft ? 'md:col-start-2' : 'md:col-start-1'
+                      }`}
+                    />
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </motion.div>

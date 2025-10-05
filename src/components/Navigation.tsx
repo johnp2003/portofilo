@@ -30,25 +30,27 @@ const Navigation = () => {
 
   return (
     <>
-      <a 
-        href="#main" 
+      <a
+        href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-primary focus:text-primary-foreground focus:rounded-md"
       >
         Skip to content
       </a>
-      
+
       <motion.nav
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border' : 'bg-background/20 backdrop-blur-sm'
+          isScrolled
+            ? 'bg-background/80 backdrop-blur-lg border-b border-border'
+            : 'bg-background/20 backdrop-blur-sm'
         }`}
       >
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <motion.a
               href="#hero"
-              className="text-xl font-bold text-foreground glow-text"
+              className="text-xl font-bold text-foreground"
               whileHover={{ scale: 1.05 }}
               onClick={(e) => {
                 e.preventDefault();
