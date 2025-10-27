@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { FloatingDock } from '@/components/ui/floating-dock';
+import {
+  IconUser,
+  IconFolder,
+  IconBriefcase,
+  IconStar,
+} from '@tabler/icons-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -16,10 +23,26 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Skills', href: '#skills' },
+    {
+      title: 'About',
+      icon: <IconUser className="w-6 h-6 text-black" stroke={2} />,
+      href: '#about',
+    },
+    {
+      title: 'Projects',
+      icon: <IconFolder className="w-6 h-6 text-black" stroke={2} />,
+      href: '#projects',
+    },
+    {
+      title: 'Experience',
+      icon: <IconBriefcase className="w-6 h-6 text-black" stroke={2} />,
+      href: '#experience',
+    },
+    {
+      title: 'Skills',
+      icon: <IconStar className="w-6 h-6 text-black" stroke={2} />,
+      href: '#skills',
+    },
   ];
 
   const scrollToSection = (href: string) => {
@@ -36,86 +59,13 @@ const Navigation = () => {
       >
         Skip to content
       </a>
-
-      <motion.nav
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
-        className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-background/80 backdrop-blur-lg border-b border-border'
-            : 'bg-background/20 backdrop-blur-sm'
-        }`}
-      >
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <motion.a
-              href="#hero"
-              className="text-xl font-bold text-foreground"
-              whileHover={{ scale: 1.05 }}
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            >
-              Portfolio
-            </motion.a>
-
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-8">
-              {navItems.map((item) => (
-                <motion.a
-                  key={item.label}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors relative group"
-                  whileHover={{ y: -2 }}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.href);
-                  }}
-                >
-                  {item.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
-                </motion.a>
-              ))}
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden text-foreground"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="md:hidden bg-card border-t border-border"
-          >
-            <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
-              {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-muted-foreground hover:text-primary transition-colors py-2"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(item.href);
-                  }}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </motion.nav>
+      <div className="fixed top-1/2 right-8 -translate-y-1/2 z-50 w-fit">
+        <FloatingDock
+          items={navItems}
+          desktopClassName="flex-col h-auto gap-6 px-4 py-6 bg-white/40 border border-gray-200 shadow-lg backdrop-blur-lg"
+          mobileClassName="flex-col"
+        />
+      </div>
     </>
   );
 };

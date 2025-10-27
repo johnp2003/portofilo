@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useTypingEffect } from '@/hooks/useTypingEffect';
 import heroImage from '@/assets/hero-coding.jpg';
 import { useEffect, useRef, useState, useMemo } from 'react';
+import myPortrait from '@/assets/my_portrait.jpg';
 
 // Helper to get random position within a bounding box
 const getRandomPosition = (maxX: number, maxY: number) => ({
@@ -163,6 +164,11 @@ const Hero = () => {
           </motion.div>
 
           <div className="hidden lg:block relative">
+            <img
+              src={myPortrait}
+              alt="My portrait"
+              className="mx-auto mb-6 w-80 h-80 object-cover rounded-full shadow-lg border-4 border-primary/30 bg-background"
+            />
             {/* Code particles - moved to right side */}
             <div className="absolute inset-0 w-full h-full overflow-visible pointer-events-none">
               {Array.from({ length: 12 }).map((_, i) => (
