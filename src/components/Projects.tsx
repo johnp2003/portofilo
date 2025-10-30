@@ -9,6 +9,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
+import { CardContainer, CardBody, CardItem } from '@/components/ui/3d-card';
 
 interface Project {
   id: number;
@@ -24,54 +25,154 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'SuDu.AI ERP System',
+    title: 'DeNate',
     description:
-      'AI-powered ERP system with comprehensive business management modules',
+      'AI-driven blockchain platform for transparent, gamified charity donations.',
     longDescription:
-      'Developed and optimized ERP modules including Sales Invoice, Purchase Request, Sales Return, WM Inventory, and Stock Management. Built using Node.js and Vue.js with Agile methodology, enhancing system efficiency through database optimizations and UI improvements.',
-    tech: ['Node.js', 'Vue.js', 'PostgreSQL', 'AWS'],
-    github: 'https://github.com',
-    live: 'https://example.com',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
+      'A decentralized platform revolutionizing charitable giving through smart contracts for transparency and efficiency. Features include gamification through NFTs, automated fund distribution, and AI-powered forecasting and chatbots. Award: Excellence in Bonus Achievement (Fintech and Blockchain) for Varsity Hackathon USM 2025.',
+    tech: [
+      'Next.js',
+      'Solidity',
+      'Scroll',
+      'Pinata',
+      'MongoDB',
+      'Chainlink Automation',
+      'The Graph',
+      'Gemini API',
+    ],
+    github: 'https://github.com/ivanwong1223/DeNate',
+    live: 'https://de-nate.vercel.app/',
+    image: '/src/assets/denate.JPG',
   },
   {
     id: 2,
-    title: 'Shell Audit Management System',
+    title: 'MemeFist',
     description:
-      'Enterprise audit management system with SharePoint integration',
+      'Decentralized Web3 platform for meme battles and NFT rewards.',
     longDescription:
-      'Assisted in building an audit management system for Shell using Symfony and DevExtreme. Led SharePoint integration for data handling and optimized queries to reduce load times by 20%.',
-    tech: ['Symfony', 'DevExtreme', 'Microsoft APIs', 'SharePoint'],
-    github: 'https://github.com',
-    live: 'https://example.com',
-    image:
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop',
+      'A Web3 platform for community-driven meme competitions, where users upload memes, compete in categories, gather upvotes, and win mintable NFTs for monetization in an integrated marketplace. Award: 1st Runner-Up in The Graph track at EthUprising Hackathon 2025.',
+    tech: [
+      'Next.js',
+      'Solidity',
+      'Scroll',
+      'Pinata',
+      'Chainlink Automation',
+      'The Graph',
+    ],
+    github: 'https://github.com/johnp2003/MemeFist-EthUprising',
+    live: 'https://meme-fist-eth-uprising.vercel.app/',
+    image: '/src/assets/memefist.JPG',
   },
   {
     id: 3,
-    title: 'Blockchain Integration Project',
-    description: 'Smart contract development and blockchain integration',
+    title: 'Deship',
+    description:
+      'Decentralized platform for fair, accountable, and bias-free scholarships.',
     longDescription:
-      'Worked on blockchain development projects integrating Solidity smart contracts with web applications, focusing on secure and efficient decentralized solutions.',
-    tech: ['Solidity', 'React.js', 'Web3.js', 'Ethereum'],
-    github: 'https://github.com',
-    live: 'https://example.com',
-    image:
-      'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&auto=format&fit=crop',
+      'A decentralized web platform that ensures fairness, accountability, and on-time scholarships to students while also eliminating demographic bias using zkProofs.',
+    tech: [
+      'Next.js',
+      'Supabase',
+      'Hardhat',
+      'Chainlink Automation',
+      'The Graph',
+      'Privy Auth',
+      'zKProof',
+    ],
+    github: 'https://github.com/JohnsonChin1009/DeShip',
+    live: 'https://de-ship.vercel.app/',
+    image: '/src/assets/deship.JPG',
   },
   {
     id: 4,
-    title: 'Full Stack Application Development Capstone',
+    title: 'Couponly',
     description:
-      'Comprehensive full-stack application with modern technologies',
+      'AI-powered smart coupon platform with NFC sharing and recommendations.',
     longDescription:
-      'Developed a complete full-stack application as part of the IBM Capstone project, demonstrating proficiency in end-to-end development, deployment, and best practices.',
-    tech: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'AWS'],
-    github: 'https://github.com',
-    live: 'https://example.com',
-    image:
-      'https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&auto=format&fit=crop',
+      'A comprehensive smart coupon management system with AI-driven mobile app, web scraper, admin-vendor platform, and AI-powered recommendations. Features include semantic search, personalized recommendations, and OCR coupon scanning.',
+    tech: [
+      'React Native',
+      'Next.js',
+      'Supabase',
+      'FastAPI',
+      'LightFM',
+      'Python',
+      'OneSignal',
+      'Playwright',
+    ],
+    github: 'https://github.com/johnp2003/couponly',
+    live: 'https://github.com/johnp2003/couponly',
+    image: '/src/assets/couponly.JPG',
+  },
+  {
+    id: 5,
+    title: 'AlzGuard',
+    description:
+      'Cloud-based system for monitoring and locating missing Alzheimer’s patients.',
+    longDescription:
+      'A cloud-based platform to locate missing Alzheimer’s patients with real-time alerts, GPS tracking, and coordination features for caregivers, volunteers, and healthcare providers deployed on Elastic Beanstalk.',
+    tech: [
+      'Next.js',
+      'AWS DynamoDB',
+      'AWS Lambda',
+      'AWS S3',
+      'AWS SQS',
+      'AWS Elastic Beanstalk',
+    ],
+    github: 'https://github.com/Aidenthien/AlzGuard',
+    live: 'https://github.com/Aidenthien/AlzGuard',
+    image: '/src/assets/alzguard.JPG',
+  },
+  {
+    id: 6,
+    title: 'YoYo',
+    description:
+      'Desktop app for inventory and sales management in the furniture industry.',
+    longDescription:
+      'Developed a desktop application using pure OOP concepts and Swing GUI for inventory and sales management in the furniture industry.',
+    tech: ['Apache NetBeans', 'Java', 'Swing GUI', 'Pure OOP'],
+    github: 'https://github.com/johnp2003/YoYo-Furniture',
+    live: 'https://github.com/johnp2003/YoYo-Furniture',
+    image: '/src/assets/yoyo.JPG',
+  },
+  {
+    id: 7,
+    title: 'Purrfect Care',
+    description: 'Web platform for multi-role appointment scheduling.',
+    longDescription:
+      'Created a web platform for scheduling appointments with up to 4 roles.',
+    tech: ['PHP', 'MySQL'],
+    github: 'https://github.com/johnp2003/Purrfect-Care-A-Petcare-System',
+    live: 'https://github.com/johnp2003/Purrfect-Care-A-Petcare-System',
+    image: '/src/assets/purrfect_care.JPG',
+  },
+  {
+    id: 8,
+    title: 'CaptifyAI',
+    description:
+      'SaaS for AI-powered caption generation with authentication and payments.',
+    longDescription:
+      'Built a SaaS application for AI-powered caption generation with user authentication and payment integration.',
+    tech: [
+      'Next.js',
+      'Clerk Auth',
+      'Google Gemini AI',
+      'Drizzle ORM',
+      'Stripe',
+    ],
+    github: 'https://github.com/johnp2003/captify-ai',
+    live: 'https://captify-ai.vercel.app/',
+    image: '/src/assets/captify_ai.JPG',
+  },
+  {
+    id: 9,
+    title: 'File Management App',
+    description: 'Web application for file organization and management.',
+    longDescription: 'A web application for file organization and management.',
+    tech: ['Vue.js', 'Laravel', 'phpMyAdmin'],
+    github: 'https://github.com/johnp2003/File-Management-System',
+    live: 'https://github.com/johnp2003/File-Management-System',
+    image: '/src/assets/file_management.JPG',
   },
 ];
 
@@ -93,7 +194,7 @@ const Projects = () => {
           </div>
 
           {/* Card Grid */}
-          <div className="grid gap-10 md:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 xl:grid-cols-3">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -101,58 +202,88 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 flex flex-col"
               >
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <div className="flex flex-col flex-1 p-6">
-                  <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tech.map((tech) => (
-                      <Badge key={tech} variant="secondary" className="text-xs">
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="flex gap-3 mt-auto">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="flex-1"
-                      onClick={() => setSelectedProject(project)}
+                <CardContainer className="inter-var" containerClassName="py-0">
+                  <CardBody className="bg-card relative group/card border border-border hover:border-primary/50 rounded-xl p-6 h-[32rem] w-full flex flex-col">
+                    <CardItem
+                      translateZ="50"
+                      className="text-xl font-bold text-foreground mb-2"
                     >
-                      View Details
-                    </Button>
-                    <Button size="sm" variant="ghost" asChild>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      {project.title}
+                    </CardItem>
+                    <CardItem
+                      as="p"
+                      translateZ="60"
+                      className="text-muted-foreground text-sm mb-4 line-clamp-2 min-h-[2.5rem]"
+                    >
+                      {project.description}
+                    </CardItem>
+                    <CardItem translateZ="100" className="w-full mb-4 h-56">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-contain rounded-lg group-hover/card:shadow-xl bg-black"
+                      />
+                    </CardItem>
+                    <div className="flex-1 flex flex-col justify-end">
+                      <CardItem translateZ="50" className="mb-4 min-h-[3.5rem]">
+                        <div className="flex flex-wrap gap-2 line-clamp-3 overflow-hidden">
+                          {project.tech.map((tech) => (
+                            <Badge
+                              key={tech}
+                              variant="secondary"
+                              className="text-xs"
+                            >
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      </CardItem>
+                    </div>
+                    <div className="flex gap-3 mt-auto">
+                      <CardItem
+                        translateZ={20}
+                        as={Button}
+                        size="sm"
+                        variant="outline"
+                        className="flex-1"
+                        onClick={() => setSelectedProject(project)}
                       >
-                        <Github size={16} />
-                      </a>
-                    </Button>
-                    <Button size="sm" variant="ghost" asChild>
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        View Details
+                      </CardItem>
+                      <CardItem
+                        translateZ={20}
+                        as={Button}
+                        size="sm"
+                        variant="ghost"
+                        asChild
                       >
-                        <ExternalLink size={16} />
-                      </a>
-                    </Button>
-                  </div>
-                </div>
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github size={16} />
+                        </a>
+                      </CardItem>
+                      <CardItem
+                        translateZ={20}
+                        as={Button}
+                        size="sm"
+                        variant="ghost"
+                        asChild
+                      >
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink size={16} />
+                        </a>
+                      </CardItem>
+                    </div>
+                  </CardBody>
+                </CardContainer>
               </motion.div>
             ))}
           </div>
