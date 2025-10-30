@@ -36,10 +36,10 @@ const experiences: ExperienceItem[] = [
       'Features include gamification through NFTs, automated fund distribution and AI-powered forecasting and chatbots.',
     ],
     images: [
-      '/src/assets/vhack_1.jpg',
-      '/src/assets/vhack_3.jpg',
-      '/src/assets/vhack_4.JPG',
-      '/src/assets/vhack2.jpg',
+      '/assets/vhack_1.jpg',
+      '/assets/vhack_3.jpg',
+      '/assets/vhack_4.JPG',
+      '/assets/vhack2.jpg',
     ],
   },
   {
@@ -55,9 +55,9 @@ const experiences: ExperienceItem[] = [
       'A Web3 platform for community-driven meme competitions, where users upload memes, compete in categories (e.g., Crypto, Gaming), gather upvotes, and win mintable NFTs for monetization in an integrated marketplace.',
     ],
     images: [
-      '/src/assets/eth_uprising_1.jpg',
-      '/src/assets/eth_uprising_3.jpg',
-      '/src/assets/eth_uprising_2.jpg',
+      '/assets/eth_uprising_1.jpg',
+      '/assets/eth_uprising_3.jpg',
+      '/assets/eth_uprising_2.jpg',
     ],
   },
   {
@@ -72,7 +72,7 @@ const experiences: ExperienceItem[] = [
       'Worked closely with cross-functional teams to enhance database schemas, UI components, tax calculations, credit limit validations, and historical data management to improve system efficiency.',
       'Resolved over 60% of total bugs while doing sprints contributing to system stability.',
     ],
-    images: ['/src/assets/aserious_1.jpg', '/src/assets/aserious_2.jpg'],
+    images: ['/assets/aserious_1.jpg', '/assets/aserious_2.jpg'],
   },
   {
     id: 2,
@@ -85,7 +85,7 @@ const experiences: ExperienceItem[] = [
       'Led SharePoint integration, developing functions for filtering and retrieving image links, showcasing adeptness in external data handling and process optimization.',
       'Optimized data retrieval queries, reducing load times by 20% through efficient use of Microsoft APIs and SharePoint data structures.',
     ],
-    images: ['/src/assets/shopper360_1.JPG', '/src/assets/shopper360_2.jpg'],
+    images: ['/assets/shopper360_1.JPG', '/assets/shopper360_2.jpg'],
   },
 ];
 

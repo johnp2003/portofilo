@@ -42,7 +42,7 @@ const projects: Project[] = [
     ],
     github: 'https://github.com/ivanwong1223/DeNate',
     live: 'https://de-nate.vercel.app/',
-    image: '/src/assets/denate.JPG',
+    image: '/assets/denate.JPG',
   },
   {
     id: 2,
@@ -61,7 +61,7 @@ const projects: Project[] = [
     ],
     github: 'https://github.com/johnp2003/MemeFist-EthUprising',
     live: 'https://meme-fist-eth-uprising.vercel.app/',
-    image: '/src/assets/memefist.JPG',
+    image: '/assets/memefist.JPG',
   },
   {
     id: 3,
@@ -81,7 +81,7 @@ const projects: Project[] = [
     ],
     github: 'https://github.com/JohnsonChin1009/DeShip',
     live: 'https://de-ship.vercel.app/',
-    image: '/src/assets/deship.JPG',
+    image: '/assets/deship.JPG',
   },
   {
     id: 4,
@@ -102,7 +102,7 @@ const projects: Project[] = [
     ],
     github: 'https://github.com/johnp2003/couponly',
     live: 'https://github.com/johnp2003/couponly',
-    image: '/src/assets/couponly.JPG',
+    image: '/assets/couponly.JPG',
   },
   {
     id: 5,
@@ -121,7 +121,7 @@ const projects: Project[] = [
     ],
     github: 'https://github.com/Aidenthien/AlzGuard',
     live: 'https://github.com/Aidenthien/AlzGuard',
-    image: '/src/assets/alzguard.JPG',
+    image: '/assets/alzguard.JPG',
   },
   {
     id: 6,
@@ -133,7 +133,7 @@ const projects: Project[] = [
     tech: ['Apache NetBeans', 'Java', 'Swing GUI', 'Pure OOP'],
     github: 'https://github.com/johnp2003/YoYo-Furniture',
     live: 'https://github.com/johnp2003/YoYo-Furniture',
-    image: '/src/assets/yoyo.JPG',
+    image: '/assets/yoyo.JPG',
   },
   {
     id: 7,
@@ -144,7 +144,7 @@ const projects: Project[] = [
     tech: ['PHP', 'MySQL'],
     github: 'https://github.com/johnp2003/Purrfect-Care-A-Petcare-System',
     live: 'https://github.com/johnp2003/Purrfect-Care-A-Petcare-System',
-    image: '/src/assets/purrfect_care.JPG',
+    image: '/assets/purrfect_care.JPG',
   },
   {
     id: 8,
@@ -162,7 +162,7 @@ const projects: Project[] = [
     ],
     github: 'https://github.com/johnp2003/captify-ai',
     live: 'https://captify-ai.vercel.app/',
-    image: '/src/assets/captify_ai.JPG',
+    image: '/assets/captify_ai.JPG',
   },
   {
     id: 9,
@@ -172,7 +172,7 @@ const projects: Project[] = [
     tech: ['Vue.js', 'Laravel', 'phpMyAdmin'],
     github: 'https://github.com/johnp2003/File-Management-System',
     live: 'https://github.com/johnp2003/File-Management-System',
-    image: '/src/assets/file_management.JPG',
+    image: '/assets/file_management.JPG',
   },
 ];
 
