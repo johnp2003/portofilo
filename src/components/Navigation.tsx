@@ -59,7 +59,7 @@ const Navigation = () => {
       >
         Skip to content
       </a>
-      <div className="fixed top-1/2 right-8 -translate-y-1/2 z-50 w-fit">
+      <div className="fixed top-1/2 right-16 -translate-y-1/2 z-50 w-fit">
         <FloatingDock
           items={navItems}
           desktopClassName="flex-col h-auto gap-6 px-4 py-6 bg-white/40 border border-gray-200 shadow-lg backdrop-blur-lg"

@@ -1,21 +1,7 @@
 import { motion } from 'framer-motion';
 import { MapPin, Code2 } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
 
 const About = () => {
-  const technologies = [
-    'React.js',
-    'TypeScript',
-    'Node.js',
-    'Python',
-    'Next.js',
-    'Vue.js',
-    'PostgreSQL',
-    'AWS',
-    'Laravel',
-    'Symfony',
-  ];
-
   return (
     <section id="about" className="py-20 relative">
       <div className="container mx-auto px-6">
@@ -33,19 +19,15 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Recent BSc (Hons) Software Engineering graduate with hands-on
-                experience in full-stack development, blockchain development,
-                and AI integration through internships and projects. Skilled in
-                web technologies, database management, and agile methodologies
-                to build scalable applications. Passionate about leveraging
-                programming expertise to innovate and enhance software systems
-                in collaborative environments.
+                I’m a Software Engineering graduate who loves turning complex
+                ideas into smooth, well-crafted applications. My passion lies in
+                building software that’s functional, thoughtful, and makes a
+                real impact.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies,
-                contributing to open-source projects, or diving into the latest
-                trends in AI and machine learning.
+                When I’m not coding, you’ll find me checking out new tech trends
+                or diving into a few rounds of gaming.
               </p>
 
               <div className="flex items-center gap-2 text-muted-foreground">
@@ -54,29 +36,19 @@ const About = () => {
               </div>
             </div>
 
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-primary">
-                Technologies I Work With
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {technologies.map((tech, index) => (
-                  <motion.div
-                    key={tech}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <Badge
-                      variant="outline"
-                      className="border-primary/50 hover:border-primary hover:bg-primary/10 transition-colors cursor-default text-base py-2 px-4"
-                    >
-                      {tech}
-                    </Badge>
-                  </motion.div>
-                ))}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex items-center justify-center h-full"
+            >
+              <div className="border-l-2 border-primary/40 pl-6">
+                <p className="text-xl md:text-2xl text-muted-foreground italic leading-relaxed">
+                  Still learning, still building, still curious.
+                </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </motion.div>
       </div>

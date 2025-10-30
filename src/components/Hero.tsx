@@ -62,11 +62,10 @@ const Hero = () => {
   const typedText = useTypingEffect({
     words: ['Software Engineer', 'Full-Stack Developer', 'Mobile Developer'],
   });
-
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       {/* Hero Background Image */}
       {/* <div className="absolute inset-0 z-0">
@@ -78,7 +77,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/70 to-background" />
       </div> */}
 
-      <div className="container mx-auto px-6 py-20 relative z-10">
+      <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -110,8 +109,7 @@ const Hero = () => {
               </span>
             </div>
             <p className="text-lg text-muted-foreground mb-8 max-w-lg">
-              Crafting elegant solutions to complex problems through clean code
-              and innovative design.
+              Not all heroes wear capes; some just push to GitHub
             </p>
             <div className="flex flex-wrap gap-4">
               <motion.div
@@ -155,7 +153,7 @@ const Hero = () => {
                 <Button
                   size="lg"
                   variant="ghost"
-                  className="hover:text-primary"
+                  className="hover:border-primary group"
                 >
                   <Github size={20} />
                 </Button>
