@@ -59,11 +59,20 @@ const Navigation = () => {
       >
         Skip to content
       </a>
-      <div className="fixed top-1/2 right-16 -translate-y-1/2 z-50 w-fit">
+      {/* Desktop Dock */}
+      <div className="hidden md:flex md:fixed md:top-1/2 md:right-4 md:-translate-y-1/2 md:z-50 md:w-fit">
         <FloatingDock
           items={navItems}
-          desktopClassName="flex-col h-auto gap-6 px-4 py-6 bg-white/40 border border-gray-200 shadow-lg backdrop-blur-lg"
+          desktopClassName="flex-col h-auto gap-6 px-4 py-6 bg-white/20 border border-gray-200 shadow-lg"
           mobileClassName="flex-col"
+        />
+      </div>
+      {/* Mobile Dock */}
+      <div className="fixed bottom-4 left-4 right-4 z-50 w-auto flex md:hidden justify-center">
+        <FloatingDock
+          items={navItems}
+          desktopClassName=""
+          mobileClassName="flex-row w-full justify-around gap-0"
         />
       </div>
     </>
