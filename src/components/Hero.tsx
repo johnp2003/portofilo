@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Github, Mail, FileText } from 'lucide-react';
+import { Github, Mail, FileText, Phone, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTypingEffect } from '@/hooks/useTypingEffect';
 import heroImage from '@/assets/hero-coding.jpg';
@@ -111,53 +111,88 @@ const Hero = () => {
             <p className="text-lg text-muted-foreground mb-8 max-w-lg">
               Not all heroes wear capes; some just push to GitHub
             </p>
-            <div className="flex flex-wrap gap-4">
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button size="lg" className="relative group overflow-hidden">
-                  <span className="relative z-10 flex items-center gap-2">
-                    <Mail size={20} />
-                    Contact Me
-                  </span>
-                  <motion.span
-                    className="absolute inset-0 bg-primary/20"
-                    initial={{ x: '-100%' }}
-                    whileHover={{ x: 0 }}
-                    transition={{ duration: 0.3 }}
+            <div className="flex flex-wrap gap-6 mt-2">
+              <div className="group relative">
+                <a
+                  href="tel:+60122334272"
+                  className="p-3 rounded transition-colors"
+                  aria-label="Phone"
+                >
+                  <Phone
+                    size={32}
+                    className="text-primary group-hover:scale-110 transition-transform"
                   />
-                </Button>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-primary/50 hover:border-primary group"
+                </a>
+                <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 mt-2 w-max px-2 py-1 rounded bg-black text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
+                  +60 12-233 4272
+                </span>
+              </div>
+              <div className="group relative">
+                <a
+                  href="mailto:johnpaulose1990@gmail.com"
+                  className="p-3 rounded transition-colors"
+                  aria-label="Email"
                 >
-                  <span className="flex items-center gap-2">
-                    <FileText size={20} />
-                    Resume
-                  </span>
-                </Button>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Button
-                  size="lg"
-                  variant="ghost"
-                  className="hover:border-primary group"
+                  <Mail
+                    size={32}
+                    className="text-primary group-hover:scale-110 transition-transform"
+                  />
+                </a>
+                <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 mt-2 w-max px-2 py-1 rounded bg-black text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
+                  johnpaulose1990@gmail.com
+                </span>
+              </div>
+              <div className="group relative">
+                <a
+                  href="https://www.linkedin.com/in/johnpaulose23"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded transition-colors"
+                  aria-label="LinkedIn"
                 >
-                  <Github size={20} />
-                </Button>
-              </motion.div>
+                  <Linkedin
+                    size={32}
+                    className="text-primary group-hover:scale-110 transition-transform"
+                  />
+                </a>
+                <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 mt-2 w-max px-2 py-1 rounded bg-black text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
+                  LinkedIn
+                </span>
+              </div>
+              <div className="group relative">
+                <a
+                  href="/assets/JohnPaulose_Nov_CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded transition-colors"
+                  aria-label="Resume"
+                >
+                  <FileText
+                    size={32}
+                    className="text-primary group-hover:scale-110 transition-transform"
+                  />
+                </a>
+                <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 mt-2 w-max px-2 py-1 rounded bg-black text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
+                  Resume
+                </span>
+              </div>
+              <div className="group relative">
+                <a
+                  href="https://github.com/johnp2003"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded transition-colors"
+                  aria-label="GitHub"
+                >
+                  <Github
+                    size={32}
+                    className="text-primary group-hover:scale-110 transition-transform"
+                  />
+                </a>
+                <span className="pointer-events-none absolute left-1/2 -translate-x-1/2 mt-2 w-max px-2 py-1 rounded bg-black text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity z-20 whitespace-nowrap">
+                  GitHub
+                </span>
+              </div>
             </div>
           </motion.div>
 

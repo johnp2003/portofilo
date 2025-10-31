@@ -7,6 +7,7 @@ import {
   IconFolder,
   IconBriefcase,
   IconStar,
+  IconCode,
 } from '@tabler/icons-react';
 
 const Navigation = () => {
@@ -40,7 +41,7 @@ const Navigation = () => {
     },
     {
       title: 'Skills',
-      icon: <IconStar className="w-6 h-6 text-black" stroke={2} />,
+      icon: <IconCode className="w-6 h-6 text-black" stroke={2} />,
       href: '#skills',
     },
   ];
