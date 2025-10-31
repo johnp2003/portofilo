@@ -3,7 +3,8 @@ import { Code, Database, Cloud, Wrench } from 'lucide-react';
 
 interface Skill {
   name: string;
-  icon: string;
+  icon?: string;
+  customImage?: string;
 }
 
 interface SkillCategory {
@@ -47,7 +48,7 @@ const skillCategories: SkillCategory[] = [
       },
       {
         name: 'Solidity',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-plain.svg',
+        customImage: '/assets/solidity.svg',
       },
       {
         name: 'HTML',
@@ -73,7 +74,7 @@ const skillCategories: SkillCategory[] = [
       },
       {
         name: 'Next.js',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg',
+        customImage: '/assets/nextjs.png',
       },
       {
         name: 'Vue.js',
@@ -89,11 +90,11 @@ const skillCategories: SkillCategory[] = [
       },
       {
         name: 'Symfony',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/symfony/symfony-original.svg',
+        customImage: '/assets/symfony.jpg',
       },
       {
         name: 'ASP.NET',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg',
+        customImage: '/assets/aspnet.png',
       },
       {
         name: 'FastAPI',
@@ -101,7 +102,7 @@ const skillCategories: SkillCategory[] = [
       },
       {
         name: 'Prisma ORM',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prisma/prisma-original.svg',
+        customImage: '/assets/prisma.jpg',
       },
     ],
   },
@@ -111,23 +112,23 @@ const skillCategories: SkillCategory[] = [
     skills: [
       {
         name: 'AWS Lambda',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+        customImage: '/assets/lambda.png',
       },
       {
         name: 'AWS S3',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+        customImage: '/assets/s3.png',
       },
       {
         name: 'AWS SQS',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+        customImage: '/assets/sqs.png',
       },
       {
         name: 'AWS DynamoDB',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+        customImage: '/assets/dynamodb.png',
       },
       {
         name: 'AWS Elastic Beanstalk',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+        customImage: '/assets/beanstalk.png',
       },
       {
         name: 'PostgreSQL',
@@ -135,7 +136,7 @@ const skillCategories: SkillCategory[] = [
       },
       {
         name: 'MySQL',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg',
+        customImage: '/assets/mysql.png',
       },
       {
         name: 'MongoDB',
@@ -157,7 +158,7 @@ const skillCategories: SkillCategory[] = [
       },
       {
         name: 'REST APIs',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg',
+        customImage: '/assets/restapi.png',
       },
       {
         name: 'Postman',
@@ -169,15 +170,15 @@ const skillCategories: SkillCategory[] = [
       },
       {
         name: 'Stripe',
-        icon: 'https://images.stripeassets.com/fzn2n1nzq965/HTTOloNPhisV9P4hlMPNA/cacf1bb88b9fc86b6c4fa054b50b2b41/Stripe_icon_-_square.svg?q=80&w=1082',
+        customImage: '/assets/stripe.png',
       },
       {
         name: 'Agile/Scrum',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg',
+        customImage: '/assets/scrum.png',
       },
       {
         name: 'Model Context Protocol',
-        icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
+        customImage: '/assets/mcp.png',
       },
     ],
   },
@@ -225,9 +226,9 @@ const Skills = () => {
                       className="group relative px-4 py-3 bg-secondary/50 rounded-xl text-sm border border-primary/20 hover:border-primary/50 hover:bg-secondary/70 transition-all duration-300 cursor-default shadow-sm hover:shadow-md hover:shadow-primary/10"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 flex items-center justify-center bg-white/90 dark:bg-white/95 rounded-lg p-1.5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                        <div className="w-7 h-7 flex items-center justify-center bg-background/80 rounded-lg p-1 group-hover:scale-110 transition-transform duration-300">
                           <img
-                            src={skill.icon}
+                            src={skill.customImage || skill.icon}
                             alt={skill.name}
                             className="w-full h-full object-contain"
                             onError={(e) => {
