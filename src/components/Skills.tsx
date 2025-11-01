@@ -89,12 +89,12 @@ const skillCategories: SkillCategory[] = [
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg',
       },
       {
-        name: 'Symfony',
-        customImage: '/assets/symfony.jpg',
-      },
-      {
         name: 'ASP.NET',
         customImage: '/assets/aspnet.png',
+      },
+      {
+        name: 'Symfony',
+        customImage: '/assets/symfony.jpg',
       },
       {
         name: 'FastAPI',
@@ -103,6 +103,10 @@ const skillCategories: SkillCategory[] = [
       {
         name: 'Prisma ORM',
         customImage: '/assets/prisma.jpg',
+      },
+      {
+        name: 'Hardhat',
+        customImage: '/assets/hardhat.png',
       },
     ],
   },
@@ -146,6 +150,10 @@ const skillCategories: SkillCategory[] = [
         name: 'Supabase',
         icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg',
       },
+      {
+        name: 'Pinata IPFS',
+        customImage: '/assets/pinata.svg',
+      },
     ],
   },
   {
@@ -179,6 +187,14 @@ const skillCategories: SkillCategory[] = [
       {
         name: 'Model Context Protocol',
         customImage: '/assets/mcp.png',
+      },
+      {
+        name: 'The Graph',
+        customImage: '/assets/the_graph.png',
+      },
+      {
+        name: 'Chainlink',
+        customImage: '/assets/chainlink.png',
       },
     ],
   },

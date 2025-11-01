@@ -65,7 +65,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: 'Deship',
+    title: 'deShip',
     description:
       'Decentralized platform for fair, accountable, and bias-free scholarships.',
     longDescription:
@@ -125,7 +125,7 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    title: 'YoYo',
+    title: 'YoYo Furniture',
     description:
       'Desktop app for inventory and sales management in the furniture industry.',
     longDescription:
