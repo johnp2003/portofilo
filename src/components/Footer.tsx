@@ -1,19 +1,33 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Heart, Phone, FileText } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
   const socialLinks = [
-    { icon: <Github size={20} />, href: 'https://github.com', label: 'GitHub' },
+    {
+      icon: <Github size={20} />,
+      href: 'https://github.com/johnp2003',
+      label: 'GitHub',
+    },
     {
       icon: <Linkedin size={20} />,
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/johnpaulose23',
       label: 'LinkedIn',
     },
     {
       icon: <Mail size={20} />,
       href: 'mailto:johnpaulose1990@gmail.com',
       label: 'Email',
+    },
+    {
+      icon: <Phone size={20} />,
+      href: 'tel:+60122334272',
+      label: 'Phone',
+    },
+    {
+      icon: <FileText size={20} />,
+      href: '/assets/JohnPaulose_Nov_CV.pdf',
+      label: 'Resume',
     },
   ];
 
@@ -50,12 +64,12 @@ const Footer = () => {
           </div>
 
           <div className="text-center space-y-2">
-            <p className="text-sm text-muted-foreground flex items-center gap-2 justify-center">
+            {/* <p className="text-sm text-muted-foreground flex items-center gap-2 justify-center">
               Built with <Heart size={16} className="text-red-500" /> using
               Next.js, Tailwind CSS, Framer Motion & Spline
-            </p>
+            </p> */}
             <p className="text-xs text-muted-foreground">
-              © 2024 John Paulose. All rights reserved.
+              © 2025 John Paulose. All rights reserved.
             </p>
           </div>
         </div>
