@@ -108,6 +108,18 @@ const skillCategories: SkillCategory[] = [
         name: 'Hardhat',
         customImage: '/assets/hardhat.png',
       },
+      {
+        name: 'Serverless',
+        customImage: '/assets/serverless.png',
+      },
+      {
+        name: 'LightFM',
+        customImage: '/assets/lightfm.png',
+      },
+      {
+        name: 'Clerk Auth',
+        customImage: '/assets/clerk.png',
+      },
     ],
   },
   {
@@ -195,6 +207,10 @@ const skillCategories: SkillCategory[] = [
       {
         name: 'Chainlink',
         customImage: '/assets/chainlink.png',
+      },
+      {
+        name: 'Github Actions',
+        customImage: '/assets/github_actions.png',
       },
     ],
   },
