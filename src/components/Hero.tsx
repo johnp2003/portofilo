@@ -194,11 +194,12 @@ const Hero = () => {
                 </span>
               </div>
             </div>
-          </motion.div>          <div className="relative">
+          </motion.div>{' '}
+          <div className="relative">
             <img
               src={myPortrait}
               alt="My portrait"
-              className="mx-auto mb-6 w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-full shadow-lg border-4 border-primary/30 bg-background"
+              className="mx-auto mb-6 -mt-8 md:mt-0 w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-full shadow-lg border-4 border-primary/30 bg-background"
             />
             {/* Code particles - moved to right side */}
             <div className="absolute inset-0 w-full h-full overflow-visible pointer-events-none">
