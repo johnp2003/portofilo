@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  portfolio:
+    build: .
+    container_name: vite-portfolio
+    restart: always
+    ports:
+      # Maps local port 3000 to the container's Nginx port 80
+      - "3000:80"
