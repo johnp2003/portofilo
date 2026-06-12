@@ -9,6 +9,8 @@ RUN npm install
 
 # Copy source code and build
 COPY . .
+# Increase Node.js memory limit so Vite doesn't crash during heavy 3D package builds
+ENV NODE_OPTIONS="--max-old-space-size=2048"
 RUN npm run build
 
 # Stage 2: Serve the application using Nginx
