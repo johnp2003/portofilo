@@ -23,6 +23,19 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    id: 5,
+    role: 'Frontend Developer (Full Stack Responsibilities)',
+    company: 'atQuest Solution',
+    period: 'Dec 2025 - Present',
+    type: 'work',
+    highlights: [
+      'Built a scalable Employee Self-Service frontend using Next.js, collaborating closely with UI/UX and business teams.',
+      'Optimized database performance by 40% through selective indexing and implemented automated data archiving pipelines via SQL Server.',
+      'Extended a .NET enterprise system with advanced role-based access controls for real-time lottery processing workflows.',
+      'Managed end-to-end database migrations to on-premises servers and provided critical production support across multiple legacy systems.',
+    ],
+  },
+  {
     id: 3,
     role: 'DeNate',
     company: 'AI-Driven Blockchain-based Charity Donation Platform',
