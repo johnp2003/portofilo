@@ -62,7 +62,12 @@ jobs:
             # Ensure directory exists and code is updated
             mkdir -p /opt/portfolio
             cd /opt/portfolio
-            if [ -d ".git" ]; then git pull origin main; else git clone https://${{ secrets.GHCR_PAT }}@github.com/johnp2003/portofilo.git .; fi
+            if [ -d ".git" ]; then 
+              git remote set-url origin https://${{ secrets.GHCR_PAT }}@github.com/johnp2003/portofilo.git
+              git pull origin main
+            else 
+              git clone https://${{ secrets.GHCR_PAT }}@github.com/johnp2003/portofilo.git .
+            fi
             
             # Login to GHCR on the VPS so it is allowed to download the image
             echo ${{ secrets.GHCR_PAT }} | docker login ghcr.io -u johnp2003 --password-stdin
