@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
   portfolio:
-    build: .
+    image: ghcr.io/johnp2003/portofilo:latest
     container_name: vite-portfolio
     restart: always
     ports:
-      # Maps local port 3000 to the container's Nginx port 80
-      - "3000:80"
+      # Maps local port 3000 to the container's Nginx port 80 (restricted to localhost)
+      - "127.0.0.1:3000:80"
