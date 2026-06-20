@@ -19,7 +19,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                I’m a Software Engineering graduate who loves turning complex
+                I’m a Software Engineering who loves turning complex
                 ideas into smooth, well-crafted applications. My passion lies in
                 building software that’s functional, thoughtful, and makes a
                 real impact.
