@@ -23,16 +23,38 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
+    id: 6,
+    role: 'AEGIS',
+    company: 'Full-Stack Web3 Security Layer for Sui',
+    period: 'Muba Hackathon (September 2026)',
+    type: 'hackathon',
+    award:
+      'Grand Prize for the Sui Track (Payments & Stablecoins) and Top 20 for the GonkaRouter Track',
+    techStack:
+      'Node.js, TypeScript, LangGraph, Fastify, Sui gRPC SDK, Gonka Router, Qdrant, Walrus Storage, MongoDB, Enoki (zkLogin)',
+    highlights: [
+      'Built a full-stack Web3 security layer that simulates and analyses Sui transactions before signing, combining a LangGraph agentic pipeline, deterministic Sui gRPC dry-run simulation, Qdrant vector-based exploit pattern matching, and dual-model AI consensus to flag scams and generate plain-English risk verdicts.',
+    ],
+    images: [
+      '/assets/muba_2.png',
+      '/assets/muba_1.jpeg',
+      '/assets/muba_group.jpeg',
+    ],
+  },
+  {
     id: 5,
     role: 'Frontend Developer (Full Stack Responsibilities)',
     company: 'atQuest Solution',
     period: 'Dec 2025 - Present',
     type: 'work',
     highlights: [
-      'Built a scalable Employee Self-Service frontend using Next.js, collaborating closely with UI/UX and business teams.',
-      'Optimized database performance by 40% through selective indexing and implemented automated data archiving pipelines via SQL Server.',
-      'Extended a .NET enterprise system with advanced role-based access controls for real-time lottery processing workflows.',
-      'Managed end-to-end database migrations to on-premises servers and provided critical production support across multiple legacy systems.',
+      'Core developer of an Employee Self-Service system using Next.js, collaborating with UI/UX designers and business analysts to deliver a responsive and scalable frontend architecture.',
+      'Designed and implemented data archiving pipelines for a Loyalty Management System (LMS) on Microsoft Azure (Cloud), improving data lifecycle management and system performance.',
+      'Investigated and resolved database utilisation spikes by optimizing queries and applying selective indexing to reduce load by 40% while balancing read/write performance.',
+      'Extended a .NET application with new business workflows, multi-language reporting, and cloud data sync.',
+      'Delivered cross-platform mobile features using React Native and Flutter, including an enhanced rebuild of an existing app and new feature extensions to a production app.',
+      'Managed database migrations from client environments to on-premises servers, including IIS deployments and configuration setup to ensure smooth system transitions.',
+      'Handled 60+ high-priority production support across multiple projects, diagnosing root causes across application, database, and deployment layers to minimize downtime.',
     ],
   },
   {

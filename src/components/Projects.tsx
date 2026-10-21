@@ -10,6 +10,7 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { CardContainer, CardBody, CardItem } from '@/components/ui/3d-card';
+import aegisProjectImg from '@/assets/aegis_project.png';
 
 interface Project {
   id: number;
@@ -23,6 +24,29 @@ interface Project {
 }
 
 const projects: Project[] = [
+  {
+    id: 10,
+    title: 'AEGIS',
+    description:
+      'AI-driven Web3 security layer simulating and analyzing Sui transactions before signing.',
+    longDescription:
+      'A full-stack Web3 security layer that simulates and analyses Sui transactions before signing, combining a LangGraph agentic pipeline, deterministic Sui gRPC dry-run simulation, Qdrant vector-based exploit pattern matching, and dual-model AI consensus to flag scams and generate plain-English risk verdicts. Award: Grand Prize for the Sui Track (Payments & Stablecoins) and Top 20 for the GonkaRouter Track at Muba Hackathon 2026.',
+    tech: [
+      'Node.js',
+      'TypeScript',
+      'LangGraph',
+      'Fastify',
+      'Sui gRPC SDK',
+      'Gonka Router',
+      'Qdrant',
+      'Walrus Storage',
+      'MongoDB',
+      'Enoki (zkLogin)',
+    ],
+    github: 'https://github.com/johnp2003/aegis-ai-agent',
+    live: 'https://muba-aegis.vercel.app/',
+    image: aegisProjectImg,
+  },
   {
     id: 1,
     title: 'DeNate',
